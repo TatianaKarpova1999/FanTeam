@@ -30,6 +30,62 @@
     src: url('../fonts/Intert-Bold.woff') format('woff');
 }
 
+.dop-style {
+    padding: 150px 80px;
+    padding-bottom: 50px;
+    text-align: left;
+    font-family: "Arial";
+    margin: 0 auto;
+    max-width: 1200px;
+
+    h1 {
+        margin-bottom: 50px;
+        line-height: 150%;
+        font-size: 30px;
+        color: #000;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        line-height: 150%;
+        font-size: 25px;
+        color: #000;
+    }
+
+    p {
+        max-width: 1000px;
+        line-height: 150%;
+        color: #000;
+    }
+
+    div {
+        margin-bottom: 50px;
+    }
+
+    a {
+        color: #000;
+    }
+
+    & .button.primary-button {
+        margin-top: 40px;
+        animation: none;
+        width: 200px;
+        color: #fff;
+    }
+
+    @media screen and (max-width: 479px) {
+        padding: 150px 30px;
+
+        h1 {
+            font-size: 25px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+}
+
 body {
     font-family: Inter, sans-serif;
     margin: 0;
@@ -39,6 +95,14 @@ body {
     max-width: 1700px;
     min-width: 320px;
     margin: 0 auto;
+}
+
+.landing {
+    display: none;
+}
+
+main {
+    overflow: hidden;
 }
 
 /* Общие стили для шапки */
@@ -359,6 +423,8 @@ nav {
     }
 }
 
+
+
 /* Адаптив для мобильных устройств */
 @media (max-width: 768px) {
     .download {
@@ -465,6 +531,7 @@ nav {
 
 /* Адаптив для мобильных устройств */
 @media (max-width: 768px) {
+
     .advantages {
         padding: 50px 15px;
     }
@@ -656,7 +723,20 @@ form {
     margin-top: 20px;
 }
 
-input[type="email"] {
+.index-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 430px;
+    margin: 0 auto;
+    margin-top: 40px;
+
+    div {
+        margin-bottom: 20px;
+    }
+}
+
+.index-email {
     width: 100%;
     max-width: 400px;
     padding: 15px;
@@ -915,6 +995,10 @@ footer {
     z-index: 1000;
     justify-content: center;
     align-items: center;
+
+    img {
+        max-width: 200px;
+    }
 }
 
 .popup-content {
@@ -943,7 +1027,7 @@ footer {
     top: 10px;
     right: 10px;
     font-size: 30px;
-    color: #333;
+    color: #fff;
     cursor: pointer;
     background: none;
     border: none;
@@ -992,7 +1076,7 @@ img {
     &::before {
         content: "";
         position: absolute;
-        background-image: url('../images/download-bg.png');
+        background-image: url('../images/download-bg.jpg');
         background-size: cover;
 
         background-repeat: no-repeat;
@@ -1275,7 +1359,7 @@ section {
 .support-page {
     font-family: Inter, sans-serif;
     background-color: #f8f9fa;
-    padding: 30px;
+    padding: 10px;
 }
 
 /* Введение */
@@ -1608,14 +1692,14 @@ section {
     &::after {
         content: "";
         position: absolute;
-        width: 50%;
+        width: 100%;
         height: 100%;
         background-image: url('../images/logo.png');
         opacity: 0.1;
         top: 0;
-        right: -15%;
+        right: -40%;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         background-position: 50%;
     }
 }
@@ -1802,6 +1886,8 @@ form p {
     margin-top: 10px;
 }
 
+
+
 /* Анимация для формы */
 @keyframes fadeIn {
     0% {
@@ -1881,7 +1967,7 @@ textarea {
         height: 50px;
         mask-image: url('../images/arr.svg');
         mask-repeat: no-repeat;
-        transform: rotate(90deg);
+        transform: rotate(90deg) translateY(75%);
         mask-position: 50% 50%;
         mask-size: cover;
         background: #ff536f;
@@ -2008,6 +2094,15 @@ textarea {
     .tutorial-tips ul li {
         font-size: 14px;
     }
+
+    .app-description p {
+        font-size: 14px;
+    }
+
+    .app-description-content h2 {
+        font-size: 20px;
+    }
+
 }
 
 /* Адаптив для всех блоков */
@@ -2119,6 +2214,112 @@ textarea {
 
 @media (max-width: 768px) {
 
+    .fantasy-sports-image {
+        max-width: 100%;
+    }
+
+    .landing {
+        margin-top: 0;
+        margin-bottom: 0;
+        display: block;
+        width: 100%;
+        max-width: 100vw;
+        position: relative;
+
+        img {
+            margin-top: 0;
+            z-index: -1;
+            display: block;
+        }
+    }
+
+    .landing-btn {
+        position: absolute;
+        bottom: 8%;
+        z-index: 1;
+        max-width: 300px;
+        height: 60px;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+
+        span {
+            background-color: #f0bd48;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 25px;
+            width: 290px;
+            height: 54px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 103%;
+            height: 118%;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #665004, #fbf1bc, #ab8e02, #c1a64f, #665004);
+            background-size: 400% 400%;
+            animation: gradient 2s ease infinite;
+            transform: translate3d(0, 0, 0);
+            z-index: -1;
+
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 107%;
+            border-radius: 10px;
+            background-color: #000;
+            z-index: -1;
+
+        }
+
+
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+
+    .popup {
+
+        img {
+            max-width: 100px;
+        }
+    }
+
+    .logo-img {
+        font-size: 18px;
+    }
+
     /* Hero */
     .hero {
         padding: 60px 15px;
@@ -2157,20 +2358,12 @@ textarea {
         }
 
         &::after {
-            content: "";
-            position: absolute;
-            width: 195%;
-            height: 40%;
-            background-image: url('../images/logo.png');
-            opacity: 0.1;
-            top: 56%;
-            right: -100%;
-            background-repeat: no-repeat;
-            background-size: cover;
+            display: none;
 
         }
 
     }
+
 
     .app-description h1,
     .rules-intro h1,
@@ -2195,7 +2388,7 @@ textarea {
     input[type="email"],
     input[type="text"],
     textarea {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .fantasy-container {
@@ -2214,6 +2407,8 @@ textarea {
     .advantage-img {
         width: 100px;
     }
+
+
 
     /* Advantages */
     .advantages {
@@ -2250,9 +2445,11 @@ textarea {
         font-size: 0.9rem;
     }
 
-    input[type="email"] {
-        width: 80%;
+    input[type="email"].index-email {
+        max-width: 90%;
     }
+
+
 
     /* Footer */
     .footer-nav ul {
@@ -2392,5 +2589,51 @@ textarea {
 
     .tutorial-step p {
         font-size: 13px;
+    }
+}
+
+@media (max-width: 1340px) {
+    .download-app {
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url('../images/download-bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 42%;
+            height: 100%;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .download-app-content {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 991px) {
+    .download-app {
+        &::before {
+            opacity: 0.2;
+            width: 60%;
+        }
+    }
+
+    .download-app-content {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 400px) {
+    .download-app {
+        &::before {
+            opacity: 0.2;
+            width: 100%;
+        }
+    }
+
+    .download-app-content {
+        max-width: 500px;
     }
 }

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-validate="html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <title>FanTeam - Ultimate Fantasy Sports Platform</title>
+    <meta
+      name="description"
+      content="Join FanTeam, the premier fantasy sports platform. Create your dream team, compete in exciting tournaments, and connect with fans worldwide. The ultimate experience for sports enthusiasts!"
+    />
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">FanTeam</div>
+        <div class="burger-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/download/">Download App</a></li>
+          <li><a href="/rules/">Rules</a></li>
+          <li><a href="/support/" class="current">Support</a></li>
+          <li><a href="/tutorial/">Tutorial</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="support-page">
+      <!-- Intro Section -->
+      <section id="support-intro" class="support-intro">
+        <h1>Need Help? We're Here for You!</h1>
+        <p>
+          Welcome to the FanTeam support page. Whether you're facing a technical
+          issue or have questions about our platform, we are here to assist you.
+          Please browse through our FAQs or reach out to our support team
+          directly. We are committed to ensuring that your experience with
+          FanTeam is seamless and enjoyable.
+        </p>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="faq">
+        <h3>Frequently Asked Questions</h3>
+
+        <div class="faq-item">
+          <h4>How do I register on FanTeam?</h4>
+          <p>
+            To register, click on the 'Sign Up' button on the homepage, enter
+            your details, and complete the verification process. Once
+            registered, you can start creating your fantasy teams!
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>How do I join a tournament?</h4>
+          <p>
+            After logging in, go to the 'Tournaments' section and select the
+            competition you'd like to join. You can either enter a free or paid
+            tournament depending on availability.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I change my team after entering a competition?</h4>
+          <p>
+            Yes, you can make changes to your team before the competition
+            starts. Once the competition is live, you cannot change your team.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>How do I earn points in a fantasy competition?</h4>
+          <p>
+            Points are earned based on the real-life performance of the players
+            in your fantasy team. The better your players perform in their
+            respective games, the more points you earn.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I participate in multiple tournaments simultaneously?</h4>
+          <p>
+            Yes, you can join multiple tournaments at the same time and create
+            different teams for each competition.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Are there any prizes for winning a tournament?</h4>
+          <p>
+            Yes, prizes are awarded to the top performers in each tournament.
+            Prizes may vary depending on the competition.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>How do I withdraw my winnings?</h4>
+          <p>
+            To withdraw your winnings, go to the 'Account' section, select
+            'Withdraw', and follow the instructions to transfer your funds to
+            your preferred payment method.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>What happens if a player in my team is injured?</h4>
+          <p>
+            If a player in your team gets injured or is unavailable, you can
+            replace them with another player before the competition starts. Once
+            the competition is live, no changes can be made.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>How can I reset my password?</h4>
+          <p>
+            If you've forgotten your password, click on the 'Forgot Password'
+            link on the login page, enter your email address, and follow the
+            instructions to reset your password.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>How do I contact customer support?</h4>
+          <p>
+            You can contact customer support by visiting the 'Support' section
+            on the website and filling out the contact form or by emailing
+            support@fanteam.com.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Is there an app available for FanTeam?</h4>
+          <p>
+            Yes, the FanTeam app is available for download on both iOS and
+            Android devices. You can download it from the respective app stores.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>How can I check the live scores of my players?</h4>
+          <p>
+            You can track the live scores of your players in the 'My Teams'
+            section, where player stats and points are updated in real time.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I play fantasy sports for free?</h4>
+          <p>
+            Yes, FanTeam offers both free and paid tournaments. You can join the
+            free tournaments and enjoy the game without any investment.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>How do I delete my FanTeam account?</h4>
+          <p>
+            To delete your account, please contact our customer support team
+            through the 'Support' section on the website, and they will assist
+            you with the process.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Support Section -->
+      <section id="contact-support" class="contact-support">
+        <h3>Still Need Help? Contact Our Support Team</h3>
+        <p>
+          If your question isn't answered in our FAQs, or if you're experiencing
+          technical issues, feel free to get in touch with our support team.
+          We're happy to help!
+        </p>
+        <form
+          id="support-form"
+          class="support-form"
+          action="/thanks_form.php"
+          method="post"
+        >
+          <div class="support-form-container">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+          <div class="support-form-container">
+            <label for="email">Your Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="support-form-container">
+            <label for="message">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Enter your query or issue"
+              required
+            ></textarea>
+          </div>
+
+          <div class="support-form-agreement">
+            <input
+              class="form__checkbox"
+              type="checkbox"
+              id="agreement"
+              name="privacy"
+              value="on"
+              required
+            />
+            <label class="form__agreement" for="agreement"
+              >I accept <a href="/privacy-policy.html">Privacy policy</a></label
+            >
+          </div>
+
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/download/">Download App</a></li>
+          <li><a href="/rules/">Rules</a></li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="/tutorial/">Tutorial</a></li>
+        </ul>
+      </div>
+      <div class="footer-info">
+        <p>FanTeam © 2023. All rights reserved.</p>
+        <p>
+          Game is prohibited in the following states: Andhra Pradesh, Assam,
+          Nagaland, Odisha, Sikkim, and Telangana.
+        </p>
+        <img src="18.png" alt="18+" />
+      </div>
+    </footer>
+
+    <script type="module" src="/script/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1687 @@
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(../fonts/Inter-Light.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/Inter-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/Inter-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/Intert-Bold.woff') format('woff');
+}
+
+body {
+    font-family: Inter, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    max-width: 1700px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+/* Общие стили для шапки */
+header {
+    background-color: #333;
+    /* Темный фон */
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #eabd3f;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &.current {
+        color: #f5a623;
+    }
+}
+
+.nav-links li a:hover {
+    color: #f5a623;
+    /* Цвет при наведении */
+}
+
+/* Стили для бургер-меню */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+}
+
+.burger-menu span {
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Мобильные стили для экрана 991px и ниже */
+@media (max-width: 991px) {
+    .nav-links {
+        display: none;
+        /* Скрыть меню по умолчанию */
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: #333;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+    }
+
+    .burger-menu {
+        display: flex;
+        /* Показывать бургер-меню */
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Показать меню при активации */
+    }
+
+    .nav-links li a:hover {
+        color: #f5a623;
+    }
+}
+
+/* Стиль для открытого меню (активного состояния) */
+.nav-links.active {
+    display: flex;
+}
+
+
+
+/* Общие стили для блока hero */
+.hero {
+    position: relative;
+
+    /* Занимает всю высоту экрана */
+    background-image: url('your-image-url.jpg');
+    /* Замените на URL вашего фонового изображения */
+    background-size: cover;
+    /* Покрывает весь блок изображением */
+    background-position: center;
+    /* Центрирует изображение */
+    background-attachment: fixed;
+    /* Фиксирует изображение при прокрутке */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    /* Белый цвет текста */
+    text-align: center;
+    padding: 100px 20px;
+    /* Отступы по бокам */
+}
+
+/* Тень и плавное затемнение для улучшения видимости текста */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* Затемнение на фоне */
+    z-index: -1;
+}
+
+/* Стили для контента внутри hero */
+.hero-content {
+    z-index: 1;
+    max-width: 800px;
+    /* Максимальная ширина контента */
+    margin: 0 auto;
+    /* Центрирование по горизонтали */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* Заглавные буквы */
+    letter-spacing: 2px;
+    /* Пробел между буквами */
+    margin-bottom: 20px;
+    /* Отступ снизу */
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    /* Отступ снизу */
+    line-height: 1.6;
+}
+
+
+
+
+.about {
+    background-color: #fff;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 70px;
+    align-items: start;
+}
+
+.about-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #e94560;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+    .about {
+        padding: 50px 15px;
+    }
+
+    .about-container {
+        padding: 30px;
+    }
+
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+}
+
+.download {
+    background: linear-gradient(135deg, #16213e, #0f3460), url('background-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.download-container {
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.download h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #e94560;
+}
+
+.download p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #f4f4f4;
+}
+
+.download-btn {
+    background-color: #e94560;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:hover {
+    background-color: #c13450;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 768px) {
+    .download {
+        padding: 50px 15px;
+    }
+
+    .download-container {
+        padding: 30px;
+    }
+
+    .download h2 {
+        font-size: 28px;
+    }
+
+    .download p {
+        font-size: 16px;
+    }
+
+    .download-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+
+.advantages {
+    background: #ffffff;
+    /* Белый фон для блока */
+    color: #333333;
+    /* Темно-серый текст */
+    text-align: center;
+    padding: 80px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Легкая тень для контраста */
+}
+
+.advantages h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #4f4f4f;
+    /* Светлый темно-серый цвет для заголовка */
+}
+
+.advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.advantage {
+    background: #f9f9f9;
+    /* Очень светлый серый фон для карточек */
+    padding: 25px;
+    border-radius: 12px;
+    width: 30%;
+    min-width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Легкая тень для карточек */
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.advantage-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.advantage h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #007bff;
+    /* Синий цвет для заголовков в карточках */
+}
+
+.advantage p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555555;
+    /* Темно-серый цвет для текста в карточках */
+}
+
+/* Анимация для картинок */
+.advantage:hover .advantage-icon {
+    transform: scale(1.1);
+}
+
+/* Анимация при наведении на карточку */
+.advantage:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Более заметная тень при наведении */
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 768px) {
+    .advantages {
+        padding: 50px 15px;
+    }
+
+    .advantages-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advantage {
+        width: 80%;
+    }
+
+    .advantage-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Темные стили для блока отзывов */
+.reviews {
+    background-image: url('path-to-your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    color: #f5f5f5;
+    text-align: center;
+    position: relative;
+    background-color: #222;
+    /* Темный фон для секции */
+}
+
+.reviews h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    /* Белый цвет для заголовка */
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+    &.dropdown-wrapper {
+        flex-flow: row;
+    }
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.slide img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.1);
+    /* Увеличение картинки при наведении */
+}
+
+.slide p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: #ddd;
+    /* Светлый цвет для текста */
+}
+
+.slide strong {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #fff;
+    /* Белый цвет для имен пользователей */
+}
+
+
+.control {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #000;
+    background-color: transparent;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover:not(.focus-visible) {
+        opacity: 0.8;
+        transition: 0.1s;
+    }
+
+    &:active:not(.focus-visible) {
+        opacity: 0.6;
+        transition: 0.1s;
+    }
+
+    &:focus-visible {
+        opacity: 0.8;
+        transition: 0.1s;
+        outline: none;
+    }
+}
+
+.control-prev,
+.control-next {
+    mask-image: url("../images/arr.svg");
+    mask-repeat: no-repeat;
+    mask-size: 50px 50px;
+    background-color: #fff;
+    mask-position: left;
+    margin-top: 80px;
+}
+
+.control-prev {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Темнеющий фон при наведении */
+}
+
+
+
+
+/* Стили для блока контактов */
+.contacts {
+    background-color: #222;
+    /* Темный фон для блока */
+    color: #fff;
+    /* Белый цвет текста для контраста */
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.contacts h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contacts p {
+    font-size: 1.2rem;
+    color: #ccc;
+    /* Светлый цвет для параграфов */
+    margin: 10px 0;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="email"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="email"]:focus {
+    background-color: #444;
+    /* Темнее фон при фокусе */
+    outline: none;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5a623;
+    /* Яркая кнопка */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d98b1b;
+    /* Тёмно-оранжевый цвет при наведении */
+}
+
+button:active {
+
+    background-color: #d98b1b;
+}
+
+form p {
+    font-size: 1rem;
+    color: #bbb;
+    /* Цвет текста для сообщений */
+    margin-top: 10px;
+}
+
+/* Анимация для формы */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contacts form {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Стили для футера */
+footer {
+    background-color: #222;
+    /* Темный фон футера */
+    color: #fff;
+    /* Белый текст для контраста */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Inter, sans-serif;
+}
+
+.footer-nav {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-nav li {
+    font-size: 1rem;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #f5a623;
+    /* Цвет при наведении на ссылку */
+}
+
+.footer-info {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #bbb;
+    /* Более светлый цвет для дополнительного текста */
+}
+
+.footer-info p {
+    margin: 10px 0;
+}
+
+.footer-info img {
+    margin-top: 10px;
+    width: 40px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .footer-nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-info p {
+        font-size: 0.85rem;
+    }
+
+    .footer-info img {
+        width: 30px;
+    }
+}
+
+/* Кнопка скачивания */
+/* Основные стили кнопки */
+.download-btn {
+    background-color: #e94560;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+    /* Зацикленная анимация пульсации */
+}
+
+/* При наведении на кнопку */
+.download-btn:hover {
+    background-color: #c13450;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Анимация пульсации */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        /* Исходное состояние */
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Увеличение кнопки */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        /* Усиление тени */
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        /* Возвращение в исходное состояние */
+    }
+}
+
+/* Стили для попапа */
+.popup {
+    display: none;
+    /* Скрыт по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Затемняющий фон */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.popup h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.popup p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.close-btn:hover {
+    color: #e94560;
+}
+
+/* General Styles */
+
+
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Section Styles */
+.app-info,
+.download-app {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 40px 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.app-info {
+    background: rgb(42, 66, 101);
+
+}
+
+
+.app-info-content,
+.download-app-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.app-info h2,
+.download-app h2,
+.download-app h1 {
+    color: #c55454;
+    font-size: 2.2rem;
+}
+
+
+.app-info p,
+.download-app p {
+    color: #555;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+.app-info-image,
+.download-app-image {
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.app-info-block {
+    background-color: #ffffff;
+    /* Белый фон для карточки */
+    padding: 20px;
+    border-radius: 12px;
+    /* Округлые углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Легкая тень */
+    transition: all 0.3s ease;
+    /* Плавный переход */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.app-info-block h3 {
+    font-size: 24px;
+    color: #2e3b4e;
+    /* Темно-синий цвет для заголовка */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.app-info-block p {
+    font-size: 16px;
+    color: #555555;
+    /* Теплый серый цвет для текста */
+    line-height: 1.5;
+}
+
+.app-info-block:hover {
+    transform: translateY(-5px);
+    /* Поднимаем карточку при наведении */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    /* Более выраженная тень */
+}
+
+.app-info-block p {
+    padding: 0 10px;
+}
+
+
+/* Download Button */
+.download-btn {
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #e94560;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.download-btn:hover {
+    background-color: #c13450;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.download-app {
+    display: flex;
+    justify-content: space-between;
+}
+
+.download-app-content {
+    max-width: 700px;
+    margin: 0;
+    text-align: left;
+
+    h1 {
+        text-transform: uppercase;
+    }
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 991px) {
+
+    .app-info-content,
+    .download-app-content {
+        max-width: 90%;
+    }
+
+    .download-app {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .download-app-image {
+        max-width: 450px;
+        margin-top: 20px;
+    }
+}
+
+/* Общие стили для страницы */
+.rules-page {
+    font-family: Inter, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+
+/* Введение */
+.rules-intro {
+    background-color: #ffffff;
+    padding: 20px;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.rules-intro h2 {
+    font-size: 28px;
+    color: #3c3c3c;
+}
+
+.rules-intro p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Разделы игры */
+.game-basics,
+.selecting-players,
+.scoring-system,
+.competitions,
+.fair-play,
+.tips-for-success {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Стили для списка правил */
+.scoring-system ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.scoring-system li {
+
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.scoring-system li::before {
+    content: "•";
+    color: #007bff;
+    margin-right: 8px;
+}
+
+/* Стили для подсказок */
+.tips-for-success ul {
+    padding-left: 20px;
+}
+
+.tips-for-success li {
+    font-size: 16px;
+    color: #007bff;
+    margin-bottom: 8px;
+}
+
+/* Стили для ссылок */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Добавление отступов для отдельных блоков */
+section {
+    margin-bottom: 20px;
+}
+
+/* Общие стили для страницы Support */
+.support-page {
+    font-family: Inter, sans-serif;
+    background-color: #f8f9fa;
+    padding: 30px;
+}
+
+/* Введение */
+.support-intro {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.support-intro h2 {
+    font-size: 28px;
+    color: #3c3c3c;
+}
+
+.support-intro p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.support-form-container {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    justify-content: space-between;
+    max-width: 800px;
+
+    label {
+        min-width: 150px;
+        text-align: left;
+    }
+}
+
+.support-form-agreement {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    column-gap: 15px;
+}
+
+/* Раздел FAQ */
+.faq {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.faq h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+
+    &.active p {
+        display: block;
+    }
+}
+
+.faq-item h4 {
+    font-size: 18px;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+/* Основные стили для страницы Tutorial */
+.tutorial-page {
+    background-color: #f7f7f7;
+    font-family: 'Inter', sans-serif;
+    padding: 30px 10%;
+}
+
+/* Стили для введения */
+.tutorial-intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tutorial-intro h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tutorial-intro p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Стили для каждого шага */
+.tutorial-step {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-step h3 {
+    font-size: 28px;
+    color: #2e3b4e;
+    margin-bottom: 15px;
+}
+
+.tutorial-step p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tutorial-step ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.tutorial-step li {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Стили для секции с советами */
+.tutorial-tips {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-tips h3 {
+    font-size: 28px;
+    color: #2e3b4e;
+    margin-bottom: 20px;
+}
+
+.tutorial-tips ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.tutorial-tips li {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Отступы между разделами */
+.tutorial-step,
+.tutorial-tips {
+    margin-bottom: 40px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .tutorial-page {
+        padding: 30px 5%;
+    }
+
+    .tutorial-intro p,
+    .tutorial-step p,
+    .tutorial-tips p,
+    .tutorial-tips li {
+        font-size: 16px;
+    }
+
+    .tutorial-intro h2 {
+        font-size: 28px;
+    }
+
+    .tutorial-step h3,
+    .tutorial-tips h3 {
+        font-size: 24px;
+    }
+}
+
+.fantasy-sports {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    /* Светлый фон для секции */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fantasy-sports-content {
+    max-width: 1200px;
+    /* Ограничиваем ширину контента */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    /* Белый фон для контента */
+    border-radius: 15px;
+    /* Округлые углы */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Легкая тень */
+}
+
+.fantasy-sports h2 {
+    font-size: 32px;
+    color: #2e3b4e;
+    /* Темно-синий цвет для заголовка */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.fantasy-sports p {
+    font-size: 18px;
+    color: #555555;
+    /* Теплый серый цвет для текста */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.fantasy-sports-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    /* Тень для изображения */
+}
+
+.fantasy-sports-content:hover {
+    transform: translateY(-5px);
+    /* Плавное поднятие блока при наведении */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    /* Увеличение тени */
+    transition: all 0.3s ease;
+    /* Плавный переход */
+}
+
+/* Новый блок с большим описанием приложения */
+.app-description {
+    padding: 50px 20px;
+    background-color: #e7f1f9;
+    /* Светлый голубой фон */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.app-description-content,
+.rules-intro,
+.support-intro {
+    max-width: 1200px;
+    width: 100%;
+    padding: 100px;
+    background-color: #ffffff;
+    /* Белый фон для контента */
+    border-radius: 15px;
+    /* Округлые углы */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    p {
+        text-align: left;
+    }
+}
+
+.app-description h1,
+.rules-intro h1,
+.support-intro h1 {
+    font-size: 36px;
+    color: #2e3b4e;
+    /* Темно-синий цвет */
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 150%;
+    margin-bottom: 70px;
+    text-align: left;
+}
+
+.app-description p,
+.rules-intro p,
+.support-intro p {
+    font-size: 18px;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.app-description-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Тень вокруг изображения */
+    margin-top: 30px;
+}
+
+/* Заголовки и блоки внутри секции "Why Choose FanTeam?" */
+.app-info-block {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-info-block h3 {
+    font-size: 22px;
+    color: #2e3b4e;
+    margin-bottom: 10px;
+}
+
+.app-info-block p {
+    color: #555555;
+    font-size: 16px;
+}
+
+.app-info-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Отступы для блоков информации */
+.app-info-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.app-info-blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.faq {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.faq h3 {
+    font-size: 30px;
+    color: #2e3b4e;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.faq-item h4 {
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #555;
+    display: none;
+    /* Скрываем ответы по умолчанию */
+}
+
+.faq-item:hover {
+    background-color: #e7f1f9;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+    background-color: #444;
+    outline: none;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5a623;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d98b1b;
+}
+
+button:active {
+    background-color: #d98b1b;
+}
+
+form p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-top: 10px;
+}
+
+/* Анимация для формы */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-support form {
+    animation: fadeIn 0.6s ease-out;
+}
+
+label {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 5px;
+}
+
+textarea {
+    resize: vertical;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.contact-support {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact-support h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-support p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 70px;
+}
+
+.submit-btn {
+    background-color: #f5a623;
+    max-width: 300px;
+    width: 100%;
+    margin-top: 50px;
+}

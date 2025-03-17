@@ -33,7 +33,12 @@
     <!-- Header -->
     <header>
       <nav>
-        <div class="logo">FanTeam</div>
+        <div class="logo">
+          <a href="/" class="logo-img">
+            <img src="images/logo.png" alt="logo" />
+            <span>FanTeam</span>
+          </a>
+        </div>
         <div class="burger-menu" onclick="toggleMenu()">
           <span></span>
           <span></span>
@@ -55,7 +60,7 @@
         <div class="hero-content">
           <h1>Build Your Dream Team!</h1>
           <p>Join millions of fantasy sports fans and win amazing prizes!</p>
-          <a href="#download" class="download-btn">Download App</a>
+          <a href="download/" class="download-btn">Download App</a>
         </div>
       </section>
 
@@ -97,7 +102,7 @@
             easy-to-use interface and thrilling competitions. Join the community
             and showcase your skills!
           </p>
-          <button class="download-btn">Download App</button>
+          <a href="download/" class="download-btn">Download App</a>
         </div>
       </section>
 
@@ -106,6 +111,7 @@
         <h2>Why Choose Us?</h2>
         <div class="advantages-list">
           <div class="advantage">
+            <img class="advantage-img" src="images/icon-1.png" alt="icon" />
             <h3>Simplicity</h3>
             <p>
               An intuitive interface designed for both beginners and experienced
@@ -113,6 +119,7 @@
             </p>
           </div>
           <div class="advantage">
+            <img class="advantage-img" src="images/icon-2.png" alt="icon" />
             <h3>Reliability</h3>
             <p>
               Guaranteed fair play, secure platform, and strict data protection
@@ -120,6 +127,7 @@
             </p>
           </div>
           <div class="advantage">
+            <img class="advantage-img" src="images/icon-3.png" alt="icon" />
             <h3>Competitions</h3>
             <p>Exciting daily and seasonal tournaments to test your skills.</p>
           </div>
@@ -132,7 +140,7 @@
         <div class="slider">
           <div class="slides">
             <div class="slide">
-              <img src="user4.jpg" alt="User Photo" />
+              <img src="images/user-1.png" alt="User Photo" />
               <p>
                 "Great tournaments and prizes. I'm thrilled! I’ve been playing
                 for months now and it’s become my favorite pastime."
@@ -141,7 +149,7 @@
               <p>September 28, 2023</p>
             </div>
             <div class="slide">
-              <img src="user5.jpg" alt="User Photo" />
+              <img src="images/user-2.png" alt="User Photo" />
               <p>
                 "Such a cool app. It's now my favorite hobby! The interface is
                 sleek, and I love how easily I can manage my team."
@@ -150,7 +158,7 @@
               <p>September 25, 2023</p>
             </div>
             <div class="slide">
-              <img src="user6.jpg" alt="User Photo" />
+              <img src="images/user-3.png" alt="User Photo" />
               <p>
                 "FanTeam has completely changed the way I play fantasy sports.
                 It’s addictive! The variety of sports keeps things fresh."
@@ -159,7 +167,7 @@
               <p>September 20, 2023</p>
             </div>
             <div class="slide">
-              <img src="user7.jpg" alt="User Photo" />
+              <img src="images/user-4.png" alt="User Photo" />
               <p>
                 "I love the variety of sports offered. It’s perfect for fans of
                 all kinds of games! The fantasy football leagues are especially
@@ -169,33 +177,13 @@
               <p>September 18, 2023</p>
             </div>
             <div class="slide">
-              <img src="user8.jpg" alt="User Photo" />
+              <img src="images/user-5.png" alt="User Photo" />
               <p>
                 "The app is easy to use and the community is amazing. Highly
                 recommend it! I’ve made lots of new friends through the app."
               </p>
               <p><strong>Leena Mehta</strong>, Ahmedabad</p>
               <p>September 10, 2023</p>
-            </div>
-            <div class="slide">
-              <img src="user9.jpg" alt="User Photo" />
-              <p>
-                "FanTeam has so many features that make it stand out from the
-                rest. I’m hooked! I love being able to track my progress in
-                real-time."
-              </p>
-              <p><strong>Karan Bhatia</strong>, Surat</p>
-              <p>September 8, 2023</p>
-            </div>
-            <div class="slide">
-              <img src="user10.jpg" alt="User Photo" />
-              <p>
-                "The fantasy leagues are really competitive, and I love the
-                weekly challenges! It feels like a real sports league
-                experience."
-              </p>
-              <p><strong>Asha Mehra</strong>, Jaipur</p>
-              <p>September 4, 2023</p>
             </div>
           </div>
           <div class="controls">
@@ -208,9 +196,18 @@
       <!-- Contacts Section -->
       <section id="contacts" class="contacts">
         <h2>Contact Us</h2>
-        <p>Phone: +91 123 456 7890</p>
-        <p>Email: support@fanteam.com</p>
-        <form>
+
+        <p>
+          Phone:
+          <a class="link pale" href="tel:++911234567890">+91 123 456 7890</a>
+        </p>
+        <p>
+          Email:
+          <a class="link pale" href="mailto:contact@fanteam.com"
+            >contact@fanteam.com</a
+          >
+        </p>
+        <form action="thanks_form.php" method="post">
           <input type="email" placeholder="Enter your email" required />
           <button type="submit">Send</button>
         </form>
@@ -228,13 +225,25 @@
           <li><a href="tutorial/">Tutorial</a></li>
         </ul>
       </div>
+
       <div class="footer-info">
         <p>FanTeam © 2023. All rights reserved.</p>
         <p>
           Game is prohibited in the following states: Andhra Pradesh, Assam,
           Nagaland, Odisha, Sikkim, and Telangana.
         </p>
-        <img src="18.png" alt="18+" />
+        <div class="footer-links">
+          <a class="link" href="terms-conditions.html">Terms of Use</a>
+          <div>
+            <a class="link" href="privacy-policy.html">Privacy policy</a>
+          </div>
+        </div>
+        <div class="footer-icon">
+          <img src="images/18+.png" alt="18+" />
+          <a href=" https://www.gamcare.org.uk/" class="game-link"
+            ><img src="images/gamecare.png" alt="Logotype" class="game-image"
+          /></a>
+        </div>
       </div>
     </footer>
 

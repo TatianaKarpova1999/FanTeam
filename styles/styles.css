@@ -57,11 +57,24 @@ nav {
     align-items: center;
 }
 
-.logo {
+.logo-img {
     font-size: 24px;
     font-weight: bold;
     color: #eabd3f;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    img {
+        max-width: 70px;
+    }
+
+
 }
 
 .nav-links {
@@ -158,17 +171,12 @@ nav {
 
 /* Общие стили для блока hero */
 .hero {
-    position: relative;
-
-    /* Занимает всю высоту экрана */
-    background-image: url('your-image-url.jpg');
-    /* Замените на URL вашего фонового изображения */
+    background-image: linear-gradient(#08090871, #1112118e), url("../images/hero-bg.jpg");
     background-size: cover;
-    /* Покрывает весь блок изображением */
-    background-position: center;
-    /* Центрирует изображение */
-    background-attachment: fixed;
-    /* Фиксирует изображение при прокрутке */
+    background-repeat: no-repeat;
+
+    background-position: 0 0, 80% 60%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,18 +187,6 @@ nav {
     /* Отступы по бокам */
 }
 
-/* Тень и плавное затемнение для улучшения видимости текста */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    /* Затемнение на фоне */
-    z-index: -1;
-}
 
 /* Стили для контента внутри hero */
 .hero-content {
@@ -218,6 +214,7 @@ nav {
     margin-bottom: 30px;
     /* Отступ снизу */
     line-height: 1.6;
+    color: #fff;
 }
 
 
@@ -246,7 +243,7 @@ nav {
 .about h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #e94560;
+    color: #ff536f;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -295,7 +292,7 @@ nav {
 }
 
 .download {
-    background: linear-gradient(135deg, #16213e, #0f3460), url('background-image.jpg') no-repeat center center/cover;
+    background: linear-gradient(45deg, rgb(12, 9, 52), rgb(7, 80, 150));
     color: #fff;
     text-align: center;
     padding: 80px 20px;
@@ -320,7 +317,7 @@ nav {
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #e94560;
+    color: #ff536f;
 }
 
 .download p {
@@ -331,7 +328,7 @@ nav {
 }
 
 .download-btn {
-    background-color: #e94560;
+    background-color: #ff536f;
     color: #fff;
     border: none;
     padding: 15px 30px;
@@ -397,6 +394,10 @@ nav {
     /* Легкая тень для контраста */
 }
 
+.advantage-img {
+    max-width: 150px;
+}
+
 .advantages h2 {
     font-size: 36px;
     margin-bottom: 30px;
@@ -439,7 +440,7 @@ nav {
 .advantage h3 {
     font-size: 22px;
     margin-bottom: 10px;
-    color: #007bff;
+    color: #f46e6e;
     /* Синий цвет для заголовков в карточках */
 }
 
@@ -485,10 +486,11 @@ nav {
 
 /* Темные стили для блока отзывов */
 .reviews {
-    background-image: url('path-to-your-background-image.jpg');
+    background-image: linear-gradient(#08090837, #1112117d), url("../images/reviews-bg.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     padding: 60px 20px;
+    padding-top: 80px;
     color: #f5f5f5;
     text-align: center;
     position: relative;
@@ -533,7 +535,7 @@ nav {
     padding: 20px;
     border: 2px solid #fff;
     border-radius: 10px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
 }
 
 .slide img {
@@ -628,7 +630,7 @@ nav {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     margin-top: 80px;
     margin-bottom: 80px;
@@ -768,6 +770,9 @@ footer {
     margin-top: 20px;
     font-size: 0.9rem;
     color: #bbb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /* Более светлый цвет для дополнительного текста */
 }
 
@@ -777,8 +782,35 @@ footer {
 
 .footer-info img {
     margin-top: 10px;
-    width: 40px;
+    width: 100px;
     height: auto;
+}
+
+.footer-links {
+    display: flex;
+    column-gap: 30px;
+    max-width: fit-content;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+
+.link {
+    color: #fff;
+}
+
+.footer-icon {
+    display: flex;
+    column-gap: 70px;
+    align-items: center;
+}
+
+.game-link {
+    max-width: 250px;
+    display: block;
+
+    img {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -799,7 +831,7 @@ footer {
 /* Кнопка скачивания */
 /* Основные стили кнопки */
 .download-btn {
-    background-color: #e94560;
+    background-color: #ff536f;
     color: #fff;
     border: none;
     padding: 15px 30px;
@@ -839,6 +871,23 @@ footer {
         transform: scale(1);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         /* Возвращение в исходное состояние */
+    }
+}
+
+@keyframes arr {
+    0% {
+        top: -100px;
+        transition: 0.2s;
+    }
+
+    50% {
+        top: -80px;
+        transition: 0.2s;
+    }
+
+    100% {
+        top: -100px;
+        transition: 0.2s;
     }
 }
 
@@ -891,7 +940,7 @@ footer {
 }
 
 .close-btn:hover {
-    color: #e94560;
+    color: #ff536f;
 }
 
 /* General Styles */
@@ -927,10 +976,28 @@ img {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+.download-app {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url('../images/download-bg.png');
+        background-size: cover;
+
+        background-repeat: no-repeat;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
+}
+
 .app-info {
     background: rgb(42, 66, 101);
 
 }
+
 
 
 .app-info-content,
@@ -943,7 +1010,7 @@ img {
 .app-info h2,
 .download-app h2,
 .download-app h1 {
-    color: #c55454;
+    color: #f66;
     font-size: 2.2rem;
 }
 
@@ -1010,7 +1077,7 @@ img {
 .download-btn {
     font-size: 1.2rem;
     color: #fff;
-    background-color: #e94560;
+    background-color: #ff536f;
     padding: 15px 30px;
     border-radius: 50px;
     text-decoration: none;
@@ -1036,6 +1103,7 @@ img {
     max-width: 700px;
     margin: 0;
     text-align: left;
+    z-index: 1;
 
     h1 {
         text-transform: uppercase;
@@ -1067,13 +1135,18 @@ img {
 /* Общие стили для страницы */
 .rules-page {
     font-family: Inter, sans-serif;
-    background-color: #f8f9fa;
+    background: linear-gradient(45deg, #f5f7fa, #c3cfe2);
+    background-position: 50% 100%;
     color: #333;
     padding: 20px;
 }
 
 /* Введение */
 .rules-intro {
+    background-image: linear-gradient(#08090871, #1112118e), url("../images/rules-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
     background-color: #ffffff;
     padding: 20px;
 
@@ -1094,6 +1167,13 @@ img {
     color: #555;
 }
 
+.game-list {
+    position: relative;
+
+
+
+}
+
 /* Разделы игры */
 .game-basics,
 .selecting-players,
@@ -1103,10 +1183,16 @@ img {
 .tips-for-success {
     background-color: #ffffff;
     padding: 20px;
-    margin-bottom: 20px;
+
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 20px;
 }
+
 
 h3 {
     font-size: 24px;
@@ -1145,7 +1231,7 @@ section p {
 
 .scoring-system li::before {
     content: "•";
-    color: #007bff;
+    color: #de2e2e;
     margin-right: 8px;
 }
 
@@ -1156,13 +1242,13 @@ section p {
 
 .tips-for-success li {
     font-size: 16px;
-    color: #007bff;
+    color: #de2e2e;
     margin-bottom: 8px;
 }
 
 /* Стили для ссылок */
 a {
-    color: #007bff;
+    color: #de2e2e;
     text-decoration: none;
 }
 
@@ -1184,6 +1270,10 @@ section {
 
 /* Введение */
 .support-intro {
+    background-image: linear-gradient(#08090871, #1112118e), url("../images/support-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
@@ -1210,7 +1300,7 @@ section {
     align-items: center;
     column-gap: 15px;
     justify-content: space-between;
-    max-width: 800px;
+    max-width: 1000px;
 
     label {
         min-width: 150px;
@@ -1220,9 +1310,10 @@ section {
 
 .support-form-agreement {
     display: flex;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
-    column-gap: 15px;
+    column-gap: 20px;
+    align-items: center;
 }
 
 /* Раздел FAQ */
@@ -1243,6 +1334,8 @@ section {
 
 .faq-item {
     margin-bottom: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
 
     &.active p {
         display: block;
@@ -1251,7 +1344,7 @@ section {
 
 .faq-item h4 {
     font-size: 18px;
-    color: #007bff;
+    color: #de2e2e;
     margin-bottom: 5px;
 }
 
@@ -1265,13 +1358,17 @@ section {
 .tutorial-page {
     background-color: #f7f7f7;
     font-family: 'Inter', sans-serif;
-    padding: 30px 10%;
+    padding: 30px 40px;
 }
 
 /* Стили для введения */
 .tutorial-intro {
+    background-image: linear-gradient(#08090871, #1112118e), url("../images/tutorial-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
     margin-bottom: 50px;
+    padding: 70px 40px;
 }
 
 .tutorial-intro h2 {
@@ -1282,10 +1379,11 @@ section {
 
 .tutorial-intro p {
     font-size: 18px;
-    color: #555;
+    color: #fff;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 /* Стили для каждого шага */
@@ -1353,6 +1451,10 @@ section {
     margin-bottom: 40px;
 }
 
+.tutorial-step {
+    margin-bottom: 150px;
+}
+
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
     .tutorial-page {
@@ -1386,8 +1488,16 @@ section {
     justify-content: center;
 }
 
+.fantasy-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
 .fantasy-sports-content {
-    max-width: 1200px;
+    max-width: 1100px;
     /* Ограничиваем ширину контента */
     width: 100%;
     display: flex;
@@ -1395,7 +1505,7 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
+    padding: 80px 20px;
     background-color: #ffffff;
     /* Белый фон для контента */
     border-radius: 15px;
@@ -1418,6 +1528,8 @@ section {
     /* Теплый серый цвет для текста */
     line-height: 1.6;
     margin-bottom: 20px;
+    max-width: 600px;
+    text-align: left;
 }
 
 .fantasy-sports-image {
@@ -1426,7 +1538,7 @@ section {
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    /* Тень для изображения */
+    max-width: 400px;
 }
 
 .fantasy-sports-content:hover {
@@ -1454,8 +1566,8 @@ section {
 .app-description-content,
 .rules-intro,
 .support-intro {
-    max-width: 1200px;
-    width: 100%;
+
+
     padding: 100px;
     background-color: #ffffff;
     /* Белый фон для контента */
@@ -1468,11 +1580,42 @@ section {
     }
 }
 
+.app-description-content {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 94%;
+        height: 90%;
+        border-radius: 10px;
+        border: 2px solid rgb(172, 51, 51);
+        left: 33px;
+        top: 28px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background-image: url('../images/logo.png');
+        opacity: 0.1;
+        top: 0;
+        right: -15%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+    }
+}
+
 .app-description h1,
 .rules-intro h1,
-.support-intro h1 {
+.support-intro h1,
+.tutorial-intro h1 {
     font-size: 36px;
-    color: #2e3b4e;
+    color: #fff;
     /* Темно-синий цвет */
     margin-bottom: 20px;
     font-weight: 700;
@@ -1482,13 +1625,33 @@ section {
     text-align: left;
 }
 
+.tutorial-intro h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.support-intro h1 {
+    color: #fff;
+}
+
+
+
 .app-description p,
 .rules-intro p,
 .support-intro p {
     font-size: 18px;
-    color: #555555;
+    color: #fff;
     line-height: 1.6;
     margin-bottom: 20px;
+}
+
+.app-description p {
+    color: #222;
+}
+
+.rules-intro p {
+    color: #fff;
 }
 
 .app-description-image {
@@ -1540,16 +1703,13 @@ section {
     gap: 30px;
 }
 
-.faq {
-    padding: 40px 20px;
-    background-color: #f4f4f4;
-}
 
 .faq h3 {
     font-size: 30px;
-    color: #2e3b4e;
-    margin-bottom: 20px;
+    color: #f75656;
+
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .faq-item {
@@ -1557,8 +1717,9 @@ section {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    padding: 15px 30px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .faq-item h4 {
@@ -1566,6 +1727,7 @@ section {
     color: #333;
     cursor: pointer;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .faq-item p {
@@ -1587,7 +1749,7 @@ input[type="email"],
 input[type="text"],
 textarea {
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     padding: 15px;
     font-size: 1rem;
     border: none;
@@ -1597,6 +1759,7 @@ textarea {
     margin-bottom: 20px;
     transition: background-color 0.3s ease;
 }
+
 
 input[type="email"]:focus,
 input[type="text"]:focus,
@@ -1654,7 +1817,7 @@ label {
 }
 
 textarea {
-    resize: vertical;
+    resize: none;
     padding: 15px;
     background-color: #333;
     color: #fff;
@@ -1664,13 +1827,13 @@ textarea {
 
 .contact-support {
     padding: 40px 20px;
-    background-color: #f4f4f4;
+    background-color: #222;
     text-align: center;
 }
 
 .contact-support h3 {
     font-size: 24px;
-    color: #333;
+    color: #fff;
 }
 
 .contact-support p {
@@ -1684,4 +1847,156 @@ textarea {
     max-width: 300px;
     width: 100%;
     margin-top: 50px;
+}
+
+/* Общие стили для секции tutorial */
+.tutorial {
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.tutorial-step {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 50px;
+        mask-image: url('../images/arr.svg');
+        mask-repeat: no-repeat;
+        transform: rotate(90deg);
+        mask-position: 50% 50%;
+        mask-size: cover;
+        background: #ff536f;
+        top: -100px;
+        left: 50%;
+        animation-name: arr;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+    }
+
+    &:first-child::before {
+        display: none;
+    }
+}
+
+.tutorial-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tutorial-step h3 {
+    font-size: 24px;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e94560;
+    padding-bottom: 10px;
+}
+
+.tutorial-step p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.tutorial-step ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tutorial-step ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    color: #555;
+}
+
+.tutorial-step ul li::before {
+    content: "•";
+    color: #e94560;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.tutorial-tips {
+    background: linear-gradient(45deg, rgb(12, 9, 52), rgb(7, 80, 150));
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.tutorial-tips h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e94560;
+    padding-bottom: 10px;
+}
+
+.tutorial-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tutorial-tips ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    color: #fff;
+}
+
+.tutorial-tips ul li::before {
+    content: "•";
+    color: #e94560;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 768px) {
+    .tutorial-step {
+        padding: 20px;
+    }
+
+    .tutorial-step h3 {
+        font-size: 22px;
+    }
+
+    .tutorial-step p,
+    .tutorial-step ul li {
+        font-size: 14px;
+    }
+
+    .tutorial-tips {
+        padding: 20px;
+    }
+
+    .tutorial-tips h3 {
+        font-size: 22px;
+    }
+
+    .tutorial-tips ul li {
+        font-size: 14px;
+    }
 }

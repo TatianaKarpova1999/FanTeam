@@ -16,7 +16,12 @@
     <!-- Header -->
     <header>
       <nav>
-        <div class="logo">FanTeam</div>
+        <div class="logo">
+          <a href="/" class="logo-img">
+            <img src="/images/logo.png" alt="logo" />
+            <span>FanTeam</span>
+          </a>
+        </div>
         <div class="burger-menu" onclick="toggleMenu()">
           <span></span>
           <span></span>
@@ -34,9 +39,21 @@
 
     <!-- Main content -->
     <main class="download-page">
+      <section id="download-app" class="download-app">
+        <div class="download-app-content">
+          <h1>Download the FanTeam App</h1>
+          <p>
+            Ready to dive into the action? Download the FanTeam app now and
+            start building your dream team. Join millions of sports fans from
+            around the world and experience the thrill of fantasy sports
+            competitions.
+          </p>
+          <a href="/download/" class="download-btn">Download App</a>
+        </div>
+      </section>
       <section id="app-description" class="app-description">
         <div class="app-description-content">
-          <h1>What is Fantasy Sports Platform with FanTeam</h1>
+          <h2>What is Fantasy Sports Platform with FanTeam</h2>
           <p>
             FanTeam is your go-to platform for fantasy sports. Whether you're a
             seasoned player or new to the world of fantasy sports, FanTeam
@@ -58,25 +75,14 @@
           </p>
         </div>
       </section>
-      <section id="download-app" class="download-app">
-        <div class="download-app-content">
-          <h1>Download the FanTeam App</h1>
-          <p>
-            Ready to dive into the action? Download the FanTeam app now and
-            start building your dream team. Join millions of sports fans from
-            around the world and experience the thrill of fantasy sports
-            competitions.
-          </p>
-          <a href="#download" class="download-btn">Download App</a>
-        </div>
-        <img class="download-app-img" src="" alt="Download app" />
-      </section>
+
       <!-- App Information Section -->
       <section id="app-info" class="app-info">
         <div class="app-info-content">
           <h2>Why Choose FanTeam?</h2>
           <div class="app-info-blocks">
             <div class="app-info-block">
+              <img class="advantage-img" src="/images/icon-5.png" alt="icon" />
               <h3>Wide Range of Sports</h3>
               <p>
                 FanTeam offers a diverse selection of sports including football,
@@ -85,6 +91,7 @@
               </p>
             </div>
             <div class="app-info-block">
+              <img class="advantage-img" src="/images/icon-4.png" alt="icon" />
               <h3>User-Friendly Interface</h3>
               <p>
                 The app is designed to be intuitive and easy to navigate, making
@@ -92,6 +99,7 @@
               </p>
             </div>
             <div class="app-info-block">
+              <img class="advantage-img" src="/images/icon-6.png" alt="icon" />
               <h3>Engaging Competitions</h3>
               <p>
                 Compete in exciting leagues and tournaments, where your skills
@@ -99,6 +107,7 @@
               </p>
             </div>
             <div class="app-info-block">
+              <img class="advantage-img" src="/images/icon-7.png" alt="icon" />
               <h3>Community of Sports Enthusiasts</h3>
               <p>
                 Join a global community of like-minded sports fans. Share your
@@ -114,19 +123,31 @@
       <section id="fantasy-sports" class="fantasy-sports">
         <div class="fantasy-sports-content">
           <h2>What Are Fantasy Sports?</h2>
-          <p>
-            Fantasy sports are online games where you create a team of real-life
-            players. Based on their real-life performances, you earn points, and
-            the better your team performs, the higher your rank. It's all about
-            strategy, knowledge, and skill in choosing the right players. With
-            FanTeam, you can compete in multiple sports like football,
-            basketball, and cricket.
-          </p>
-          <img
-            src="images/fantasy-sports.png"
-            alt="Fantasy Sports Overview"
-            class="fantasy-sports-image"
-          />
+          <div class="fantasy-container">
+            <div>
+              <p>
+                Fantasy sports are online strategy games where you build a
+                virtual team composed of real-life athletes. Your team's success
+                is determined by the real-world performances of the players you
+                select. The more effectively your players perform in actual
+                matches, the better your fantasy team ranks in the competition.
+              </p>
+              <p>
+                Playing fantasy sports allows you to test your knowledge, refine
+                your strategy, and challenge yourself against other sports
+                enthusiasts. Whether you enjoy football, basketball, or cricket,
+                fantasy sports give you a chance to analyze player statistics,
+                predict outcomes, and make crucial decisions just like a real
+                team manager.
+              </p>
+            </div>
+
+            <img
+              src="/images/download-img.jpg"
+              alt="Fantasy Sports Overview"
+              class="fantasy-sports-image"
+            />
+          </div>
         </div>
       </section>
     </main>
@@ -142,13 +163,25 @@
           <li><a href="/tutorial/">Tutorial</a></li>
         </ul>
       </div>
+
       <div class="footer-info">
         <p>FanTeam © 2023. All rights reserved.</p>
         <p>
           Game is prohibited in the following states: Andhra Pradesh, Assam,
           Nagaland, Odisha, Sikkim, and Telangana.
         </p>
-        <img src="18.png" alt="18+" />
+        <div class="footer-links">
+          <a class="link" href="/terms-conditions.html">Terms of Use</a>
+          <div>
+            <a class="link" href="/privacy-policy.html">Privacy policy</a>
+          </div>
+        </div>
+        <div class="footer-icon">
+          <img src="/images/18+.png" alt="18+" />
+          <a href=" https://www.gamcare.org.uk/" class="game-link"
+            ><img src="/images/gamecare.png" alt="Logotype" class="game-image"
+          /></a>
+        </div>
       </div>
     </footer>
 

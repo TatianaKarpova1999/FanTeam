@@ -2436,6 +2436,7 @@ textarea {
     /* Contacts */
     .contacts {
         padding: 40px 15px;
+        border-radius: 0;
     }
 
     .contacts h2 {

@@ -295,11 +295,11 @@ nav {
     background: linear-gradient(45deg, rgb(12, 9, 52), rgb(7, 80, 150));
     color: #fff;
     text-align: center;
-    padding: 80px 20px;
+    padding: 80px 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
+
 }
 
 .download-container {
@@ -824,8 +824,18 @@ footer {
     }
 
     .footer-info img {
-        width: 30px;
+        width: 70px;
     }
+
+    .game-link {
+        width: 130px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+
 }
 
 /* Кнопка скачивания */
@@ -1749,7 +1759,6 @@ input[type="email"],
 input[type="text"],
 textarea {
     width: 100%;
-    max-width: 800px;
     padding: 15px;
     font-size: 1rem;
     border: none;
@@ -1998,5 +2007,390 @@ textarea {
 
     .tutorial-tips ul li {
         font-size: 14px;
+    }
+}
+
+/* Адаптив для всех блоков */
+@media (max-width: 991px) {
+
+    /* Hero */
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* About */
+    .about {
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 20px;
+    }
+
+    .about-container {
+        padding: 30px;
+    }
+
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+
+    /* Advantages */
+    .advantages {
+        padding: 60px 20px;
+    }
+
+    .advantages h2 {
+        font-size: 28px;
+    }
+
+
+    /* Reviews */
+    .reviews {
+        padding: 50px 20px;
+    }
+
+    .reviews h2 {
+        font-size: 2rem;
+    }
+
+    .slide p {
+        font-size: 1rem;
+    }
+
+    /* Contacts */
+    .contacts {
+        padding: 50px 20px;
+    }
+
+    .contacts h2 {
+        font-size: 2rem;
+    }
+
+    .contacts p {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-nav ul {
+        gap: 20px;
+    }
+
+    .footer-info p {
+        font-size: 0.9rem;
+    }
+
+    /* Fantasy Sports */
+    .fantasy-sports {
+        padding: 40px 20px;
+    }
+
+    .fantasy-sports h2 {
+        font-size: 28px;
+    }
+
+    .fantasy-sports p {
+        font-size: 16px;
+    }
+
+    /* Tutorial Step */
+    .tutorial-step {
+        padding: 25px;
+    }
+
+    .tutorial-step h3 {
+        font-size: 22px;
+    }
+
+    .tutorial-step p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Hero */
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* About */
+    .about {
+        padding: 50px 15px;
+    }
+
+    .about h2 {
+        font-size: 24px;
+    }
+
+    .about p {
+        font-size: 14px;
+    }
+
+    .app-description {
+        padding: 50px 20px;
+    }
+
+    .app-description-content {
+        padding: 50px 20px;
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 195%;
+            height: 40%;
+            background-image: url('../images/logo.png');
+            opacity: 0.1;
+            top: 56%;
+            right: -100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+    }
+
+    .app-description h1,
+    .rules-intro h1,
+    .support-intro h1,
+    .tutorial-intro h1 {
+        font-size: 25px;
+    }
+
+    .app-description-content,
+    .rules-intro,
+    .support-intro {
+        padding: 50px 20px;
+    }
+
+    .support-form-container {
+
+        label {
+            display: none;
+        }
+    }
+
+    input[type="email"],
+    input[type="text"],
+    textarea {
+        max-width: 90%;
+    }
+
+    .fantasy-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .app-info {
+        padding: 50px 20px;
+    }
+
+    .app-info-blocks {
+        grid-template-columns: 1fr;
+    }
+
+    .advantage-img {
+        width: 100px;
+    }
+
+    /* Advantages */
+    .advantages {
+        padding: 50px 15px;
+    }
+
+    .advantages h2 {
+        font-size: 24px;
+    }
+
+    /* Reviews */
+    .reviews {
+        padding: 40px 15px;
+    }
+
+    .reviews h2 {
+        font-size: 1.8rem;
+    }
+
+    .slide p {
+        font-size: 0.9rem;
+    }
+
+    /* Contacts */
+    .contacts {
+        padding: 40px 15px;
+    }
+
+    .contacts h2 {
+        font-size: 1.8rem;
+    }
+
+    .contacts p {
+        font-size: 0.9rem;
+    }
+
+    input[type="email"] {
+        width: 80%;
+    }
+
+    /* Footer */
+    .footer-nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-info p {
+        font-size: 0.85rem;
+    }
+
+    /* Fantasy Sports */
+    .fantasy-sports {
+        padding: 30px 15px;
+    }
+
+    .fantasy-sports h2 {
+        font-size: 24px;
+    }
+
+    .fantasy-sports p {
+        font-size: 14px;
+    }
+
+    /* Tutorial Step */
+    .tutorial-step {
+        padding: 20px;
+    }
+
+    .tutorial-step h3 {
+        font-size: 20px;
+    }
+
+    .tutorial-step p {
+        font-size: 14px;
+    }
+
+    .download-app {
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    /* Hero */
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    /* About */
+    .about {
+        padding: 40px 10px;
+    }
+
+    .about h2 {
+        font-size: 22px;
+    }
+
+    .about p {
+        font-size: 13px;
+    }
+
+    /* Advantages */
+    .advantages {
+        padding: 40px 10px;
+    }
+
+    .advantages h2 {
+        font-size: 22px;
+    }
+
+
+    /* Reviews */
+    .reviews {
+        padding: 30px 10px;
+    }
+
+    .reviews h2 {
+        font-size: 1.6rem;
+    }
+
+    .slide p {
+        font-size: 0.8rem;
+    }
+
+    /* Contacts */
+    .contacts {
+        padding: 30px 10px;
+    }
+
+    .contacts h2 {
+        font-size: 1.6rem;
+    }
+
+    .contacts p {
+        font-size: 0.8rem;
+    }
+
+    /* Footer */
+    .footer-nav ul {
+        gap: 10px;
+    }
+
+    .footer-info p {
+        font-size: 0.8rem;
+    }
+
+    /* Fantasy Sports */
+    .fantasy-sports {
+        padding: 20px 10px;
+    }
+
+    .fantasy-sports h2 {
+        font-size: 22px;
+    }
+
+    .fantasy-sports p {
+        font-size: 13px;
+    }
+
+    /* Tutorial Step */
+    .tutorial-step {
+        padding: 15px;
+    }
+
+    .tutorial-step h3 {
+        font-size: 18px;
+    }
+
+    .tutorial-step p {
+        font-size: 13px;
     }
 }
